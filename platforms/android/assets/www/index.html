@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        DESARROLLADO POR LUIS ALBERTO CISNEROS GÓMEZ
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+            <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
+        -->
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Yachay</title>
+        <link rel="stylesheet" href="css/sweetalert2.css">
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+        <link rel="stylesheet" type="text/css" href="css/owl.theme.css">
+        <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+        <link rel="stylesheet" href="css/theme.css">
+    </head>
+    <body>
+      <div data-role="page" id="pageone">
+          <div data-role="content">
+          </div>
+      </div>
+
+      <div data-role="page" id="pagetwo" class="ui-responsive-panel">
+        <div data-role="header" data-theme="c" data-position="fixed">
+          <a href="#panel" data-role="button" data-icon="bars" data-iconpos="notext">Menu</a>
+          <h1>Inicio</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+          <div class="owl-demo owl-carousel owl-theme">
+            <div class="item"><img src="img/home.jpg" alt="Owl Image"></div>
+            <div class="item"><img src="img/uno.jpg" alt="Owl Image"></div>
+            <div class="item"><img src="img/dos.jpg" alt="Owl Image"></div>
+            <div class="item"><img src="img/tres.jpg" alt="Owl Image"></div>
+            <div class="item"><img src="img/cuatro.jpg" alt="Owl Image"></div>
+          </div>
+          <br><br>
+          <ul data-role="listview" id="lista-general" class="ui-nodisc-icon"></ul>
+        </div>
+
+        <div data-role="popup" id="popupDialogo" data-overlay-theme="b" data-theme="a" style="max-width:400px;">
+          <div data-role="header" data-theme="c">
+            <a href="#" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-left" data-rel="back">Close</a>
+            <h1>Informaci&oacute;n</h1>
+          </div>
+          <div data-role="main" class="ui-content" style="text-align: center;">
+            <div data-controltype="image">
+              <img src="img/yachay.png"/>
+            </div>
+            <h4>Direcci&oacute;n de Sistemas Inform&aacute;ticos</h4>
+            <h5>Gerencia de Tecnolog&iacute;a</h5>
+            <p>
+              Tel&eacute;fono: 02 3949100 Ext: 3010<br/>
+              E-mail: sistemas@yachay.gob.ec
+            </p>
+          </div>
+        </div>
+
+        <div data-role="footer" data-theme="c" data-position="fixed" style="text-align: center;">
+          <a href="#popupDialogo" data-icon="info" data-rel="popup" data-position-to="window" data-transition="pop">
+            Powered by: Yachay EP - GDT</a>
+        </div>
+        
+        <div class="panel left" data-role="panel" data-position="left" data-theme="c" data-display="reveal" id="panel"> 
+          <ul data-role="listview" id="lista-menu">
+            <li data-icon="delete"><a href="#" data-rel="close">Servicios</a></li>          
+          </ul> 
+        </div>
+        
+      </div>
+
+      <div data-role="page" id="pagethree" class="myPage">
+        <div data-theme="c" data-role="header" data-position="fixed" id="cabciud">
+          <a href="#pagetwo" data-role="button" data-icon="back" data-iconpos="notext">Regresar</a>
+          <h1>Yachay</h1>
+          <a href="#pagetwo" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        </div>
+
+        <div data-role="main"  class="ui-content" id="catciud"></div>
+
+        <div data-theme="c" data-role="footer" data-position="fixed"></div>
+      </div> 
+      
+      <div data-role="page" id="pagefour">
+        <div data-theme="c" data-role="header" data-position="fixed">
+          <a href="#pagetwo" data-role="button" data-icon="back" data-iconpos="notext">Regresar</a>
+          <h1>Servicios</h1>
+          <a href="#pagetwo" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        </div>
+
+        <div data-role="main"  class="ui-content" id="catcont">  
+        </div>
+
+        <div data-theme="c" data-role="footer" data-position="fixed"></div>
+      </div> 
+
+      <div data-role="page" id="pagefive" class="myPage">
+        <div data-theme="c" data-role="header" data-position="fixed">
+          <a href="#pagefour" data-role="button" data-icon="back" data-iconpos="notext">Regresar</a>
+          <h1>Yachay</h1>
+          <a href="#pagetwo" data-role="button" data-icon="home" data-iconpos="notext">Home</a>
+        </div>
+
+        <div data-role="main"  class="ui-content" id="contsitio"></div>
+
+        <div data-theme="c" data-role="footer" data-position="fixed"></div>
+      </div> 
+
+      <div data-url="map-page" data-role="page" id="pagesix">
+        <div data-theme="c" data-role="header" data-position="fixed">
+          <a href="#pagefive" data-role="button" data-icon="back" data-iconpos="notext">Regresar</a>
+          <h1>Localizaci&oacute;n</h1>
+          <a href="#" id="miUbicacion" data-role="button" data-icon="location" data-iconpos="notext">GPS</a>
+        </div>
+        <div data-role="main"  class="ui-content" id="contmapa">
+
+        </div>
+      </div> 
+      <!--SCRIPTS-->
+      <script type="text/javascript" src="cordova.js"></script>
+      <script src="js/sweetalert2.min.js"></script>
+      <script src="js/jquery.js"></script>
+      <script src="js/owl.carousel.js"></script>
+      <script src="js/jquery.mobile-1.4.5.min.js"></script>
+      <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDpF74XSYlYwphoxT-x6pMEIwmIO7PS9e0"></script>
+      <script src="js/logica.js"></script>
+    </body>
+</html>
